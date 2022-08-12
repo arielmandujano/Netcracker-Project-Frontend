@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="title">
+        Car Rental App
+        <div class="subtitle">
+            By Ariel Mandujano
+        </div>
+    </div>
+    <div class="looking">
+        Need a car for some days? We are here to help.
+    </div>
+    <div class="extras">
+        <div class="car">
+            <img src="https://www.freepnglogos.com/uploads/honda-car-png/honda-car-honda-civic-price-pakistan-review-full-specs-23.jpg" width="500px" height="375px">
+        </div>
+        <div class="links">
+            <div class="models">
+                Looking for a specific model? 
+                <div class="modelsDiv">
+                    <button class="modelButton" routerLink="/models"> Our models </button>
+                </div>
+            </div>
+            <p> Or </p>
+            <div class="login" *ngIf="!logged">
+                <button class="loginButton" routerLink="/login"> Login </button>
+            </div>
+            <div class="register" *ngIf="!logged">
+                <button class="registerButton" routerLink="/register"> Sing-up </button>
+            </div>
+            <div class="register" *ngIf="logged">
+                <button class="registerButton" routerLink="/login"> My reserves </button>
+            </div>
+        </div>
+    </div>
+</div>

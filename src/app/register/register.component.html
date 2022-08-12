@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="title">
+        <h2> Register </h2> 
+    </div>
+    <form [formGroup]="createUserForm" (ngSubmit)="onCreate(createUserForm.value)" class="createForm">
+        <label for="fisrtName">
+            First name
+        </label>
+        <input type="text" name="firstName" formControlName="firstName" required>
+        <label for="lastName">
+            Last name
+        </label>
+        <input type="text" name="lastName" formControlName="lastName" required>
+        <label for="address">
+            Address
+        </label>
+        <input type="text" name="address" formControlName="address" required>
+        <label for="phoneNumber">
+            Phone number
+        </label>
+        <input type="tel" name="phoneNumber" formControlName="phoneNumber" placeholder="" required>
+        <label for="username">
+            Username
+        </label>
+        <input type="text" name="username" formControlName="userName" required>
+        <label for="email">
+            Email
+        </label>
+        <input type="email" name="email" formControlName="email" placeholder="example@example.com" required>
+        <label for="password">
+            Password
+        </label>
+        <input type="password" name="password" formControlName="password" required>
+        <div class="buttonSubmit">
+            <input type="submit" class="createUserButton" value="Sing-up">
+        </div>
+    </form>
+</div>

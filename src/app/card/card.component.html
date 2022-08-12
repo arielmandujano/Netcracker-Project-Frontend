@@ -1,0 +1,31 @@
+<div class="card" *ngIf="model !== null">
+    <div class="imgBox" *ngIf="model.picture === null">
+        <div class="modelName">
+            <h2>{{model.modelName}}</h2>
+        </div>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg" width="350px" height="214px" alt="car">
+    </div>
+    <div class="imgBox" *ngIf="model.picture !== null">
+        <div class="modelName">
+            <h2>{{model.modelName}}</h2>
+        </div>
+        <img src="{{model.picture}}" width="350px" height="214px" alt="car">
+    </div>
+    <div class="details">
+        <div class="model">
+            <h2>{{model.modelName}}</h2>
+        </div>
+        <div class="brand">
+            <h5>{{model.brand}}</h5>
+        </div>
+        <div class="year">
+            <h6>Model year: {{model.modelYear}}</h6>
+        </div>
+        <div class="color">
+            <p>Color: {{model.color}}</p>
+        </div>
+        <div class="type">
+            <p>Fuel type: {{model.carType}}</p>
+        </div>
+    </div>
+</div>

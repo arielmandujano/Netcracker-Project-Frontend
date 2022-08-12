@@ -1,0 +1,42 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(15%);
+    width: 400px;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255,255,255, .5),
+    6px 6px 8px rgba(255,255,255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    padding: 15px;
+}
+
+.buttonSubmit {
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.createUserButton {
+    color: #efefef;
+    background-color: rgb(6, 40, 61);;
+    width: 25%;
+    height: 40px;
+    transition: 0.5s;
+    border-radius: 7px;
+    border: 0px;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255,255,255, .5),
+    6px 6px 8px rgba(255,255,255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.createUserButton:hover {
+    box-shadow: scale(1.10);
+}

@@ -1,0 +1,19 @@
+<app-navbar style="padding: 0;"></app-navbar>
+<div class="container">
+    <div class="filters">
+        <app-model-filters (modelsFilters)="setFilters($event)"></app-model-filters>
+    </div>
+    <div class="models" *ngIf="models.length != 0">
+        <div *ngFor="let model of models">
+            <app-card [model]=model></app-card>
+        </div>
+    </div>
+    <div class="noModels" *ngIf="models.length == 0">
+        <h1>
+            Sorry :(
+        </h1>
+        <h2>
+            We do not have any model with the specified filters.
+        </h2>
+    </div>
+  </div>

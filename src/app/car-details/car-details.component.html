@@ -1,0 +1,25 @@
+<div class="card" *ngIf="car != null">
+    <div class="picture" *ngIf="car.modelId.picture == null">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg" width="300px" height="184px" alt="car">
+    </div>
+    <div class="picture" *ngIf="car.modelId.picture != null">
+        <img src="{{car.modelId.picture}}" width="300px" height="184px" alt="car">
+    </div>
+    <div class="modelDetails">
+        <div class="modelName">
+            {{car.modelId.modelName}}
+        </div>
+        <div class="modelYear">
+            Model year: {{car.modelId.modelYear}}
+        </div>
+        <div class="brand">
+            Brand: {{car.modelId.brand}}
+        </div>
+        <div class="type">
+            Fuel type: {{car.modelId.carType}}
+        </div>
+        <div class="pricePerDay">
+            Price per day: $ {{car.pricePerDay.toFixed(2)}}
+        </div>
+    </div>
+</div>

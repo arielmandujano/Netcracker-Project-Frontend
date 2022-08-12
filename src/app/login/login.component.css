@@ -1,0 +1,124 @@
+.loginForm {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+    width: 400px;
+    padding: 10px;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255,255,255, .5),
+    6px 6px 8px rgba(255,255,255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.logged {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginButton {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.logInButton {
+    color: #efefef;
+    background-color: #06283d;;
+    width: 25%;
+    height: 40px;
+    transition: 0.5s;
+    border-radius: 7px;
+    border: 0px;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255,255,255, .5),
+    6px 6px 8px rgba(255,255,255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.formLogin .logInButton:hover {
+    transform: scale(1.10);
+}
+
+.createUser {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.createUser h4 {
+    width: fit-content;
+    font-size: 10pt;
+}
+
+.createButton {
+    padding: auto;
+    background-color: #efefef;
+    color: #06283d;;
+    width: 25%;
+    height: 40px;
+    transition: 0.5s;
+    border-radius: 7px;
+    border: 0px;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255,255,255, .5),
+    6px 6px 8px rgba(255,255,255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.createButton:hover {
+    transform: scale(1.10);
+}
+
+.searchReservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 15px 35px;
+    margin-top: 10px;
+    transition: 1s;
+    width: 660px;
+}
+
+.field {
+    padding: 15px 35px;
+    font-size: 15pt;
+    display: flex;
+    flex-direction: column;
+}
+
+.idNumber {
+    padding: 5px 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.searchButton {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.carCard {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

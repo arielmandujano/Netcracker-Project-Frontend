@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+.navbar {
+    z-index: 10;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: #06283D;
+    height: auto;
+    overflow: hidden;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.navbar .name{
+    background-color: #f1f1f1;
+    color: #1363DF;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    text-align: center;
+    font-size:15pt;
+}
+
+.navbar .name:hover {
+    background-color: #f1f1f1;
+    color: #1363DF;
+    cursor: default;
+}
+
+.navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 17px;
+    transition: 0.5s;
+    height: 60px;
+}
+
+.navbar a:hover {
+    background-color: #1365dfbe;
+    color: #f1f1f1;
+    height: 60px;
+    cursor: pointer;
+}
+

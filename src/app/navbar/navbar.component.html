@@ -1,0 +1,23 @@
+<div class="navbar">
+    <a class="name">
+        Car Rental App
+    </a>
+    <a routerLink="/home">
+        Home
+    </a>
+    <a routerLink="/models">
+        Models
+    </a>
+    <a *ngIf="userLogged" routerLink="/new-reservation">
+        Reserve
+    </a>
+    <a *ngIf="userLogged" routerLink="/login">
+        My Reserves
+    </a>
+    <a routerLink="/login" *ngIf="!userLogged">
+        Login
+    </a>
+    <a (click)="onLogout()" *ngIf="userLogged" routerLink="/login">
+        Logout
+    </a>
+</div>

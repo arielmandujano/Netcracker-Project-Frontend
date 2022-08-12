@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="title">
+        <h1>
+            Search
+        </h1>
+    </div>
+    <div class="formContainer">
+        <form [formGroup]="filtersForm" (ngSubmit)="getMoldelsFiltered(filtersForm.value)" class="filtersForm">
+            <label for="modelSearch" class="label">
+                Model 
+            </label>
+            <input type="search" name="modelSearch" formControlName="model">
+            <label for="brandSearch" class="label">
+                Brand 
+            </label>
+            <input type="search" name="brandSearch" formControlName="brand" list="brands">
+            <datalist id="brands">
+                <option *ngFor="let brand of brands" [value]="brand"> {{brand}} </option>
+            </datalist>
+            <label for="yearSearch" class="label">
+                Year
+            </label>
+            <input type="number" value="2022" name="yearSearch" min="1990" formControlName="year">
+            <label for="typeSearch" class="label">
+                Car fuel type 
+            </label>
+            <input type="search" name="typeSearch" formControlName="type">
+            <label for="colorSearch" class="label">
+                Color 
+            </label>
+            <input type="search" name="colorSearch" formControlName="color">
+            <fieldset>
+                <Legend>Order by</Legend>
+                <div>
+                    <input type="radio" id="orderBy1" name="orderBy" value="MODEL" formControlName="orderBy" checked>
+                    <label for="orderBy1" class="radio">Model</label>
+                </div>
+                <div>
+                    <input type="radio" id="orderBy2" name="orderBy" value="YEAR" formControlName="orderBy">
+                    <label for="orderBy2" class="radio">Year</label>
+                </div>
+                <div>
+                    <input type="radio" id="orderBy3" name="orderBy" value="BRAND" formControlName="orderBy">
+                    <label for="orderBy3" class="radio">Brand</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <Legend>Order</Legend>
+                <div>
+                    <input type="radio" id="order1" name="order" value="ASC"  formControlName="order" checked>
+                    <label for="order1" class="radio">Ascendant</label>
+                </div>
+                <div>
+                    <input type="radio" id="order2" name="order" value="DESC"  formControlName="order">
+                    <label for="order2" class="radio">Descendant</label>
+                </div>
+            </fieldset>
+            <input type="submit" class="searchButton" value="SEARCH">
+        </form>
+    </div>
+</div>

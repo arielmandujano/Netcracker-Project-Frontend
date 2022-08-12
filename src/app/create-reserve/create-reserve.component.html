@@ -1,0 +1,62 @@
+<div class="reservation">
+    <div class="title">
+        New reservation
+    </div>
+    <hr>
+    <div class="formReservation">
+        <form [formGroup]="parametersForm" (ngSubmit)="lookAvialableCars(parametersForm.value)">
+            Select start and end dates
+            <div class="dates">
+                <div class="startDate">
+                    <label for="startDate">Start date: </label>
+                    <input type="date" name="startDate" [value]="todayString" class="dateForm" required min="{{todayString}}" formControlName="startDate" [(ngModel)]="startDate" (ngModelChange)="updateMinDate($event)">
+                </div>
+                <div class="endDate">
+                    <label for="endDate">End date: </label>
+                    <input type="date" name="endDate" [value]="tomorrowString" class="dateForm" required min="{{tomorrowString}}" formControlName="endDate" [(ngModel)]="endDate">
+                </div>
+            </div>
+            <div class="filters">
+                Search for a car
+                <div class="fields">
+                    <label for="model">Model</label>
+                    <input type="search" name="model" placeholder="Model name" formControlName="model">
+                    <label for="brand">Brand</label>
+                    <input type="search" name="brand" placeholder="Brand name" formControlName="brand">
+                    <label for="year">Year</label>
+                    <input type="number" name="year" placeholder="Model year" formControlName="year">
+                </div>
+                <div class="buttonSearch">
+                    <input type="submit" value="SEARCH">
+                </div>
+            </div>
+        </form>
+        <div class="avialableCars" *ngIf="cars.length !== 0">
+            <hr>
+            Avialable cars:
+            Showing {{cars.length}} results
+            <div class="allCarsAvialable">
+                <form [formGroup]="carForm">
+                    <fieldset class="allCars">
+                        <div class="cars" *ngFor="let car of cars">
+                            <label>
+                                <input type="radio" value="{{car.carId}}" [(ngModel)]="selectedCarId" name="selectedCarId" class="carRadioButton" (change)="setCarById($event)" formControlName="selectedCarId">
+                                <div class="carDetails">
+                                    <app-car-details [car]=car></app-car-details>
+                                </div>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="amount" *ngIf="cars.length != 0">
+            <hr>
+            Total amount: ${{totalAmount.toFixed(2)}}
+        </div>
+    </div>
+    <hr *ngIf="selectedCar != null">
+    <div class="submitReserve" *ngIf="selectedCar != null">
+        <button class="buttonSubmitReserve" (click)="submitReservation($event)"> Create reserve </button>
+    </div>
+</div>

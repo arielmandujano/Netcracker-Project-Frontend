@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    height: max-content;
+}
+
+.title {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    color: #1363DF;
+    font-size: 50pt;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 15pt;
+    text-align: right;
+}
+
+.looking {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.extras {
+    display: flex;
+    flex-direction: row;
+} 
+
+.car {
+    transition: 1s;
+}
+
+.car:hover {
+    transform: rotate(3deg);
+}
+
+.links {
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateX(50px);
+}
+
+.models {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    font-size: 14pt;
+    color : #06283D;
+}
+
+.modelsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.modelButton {
+    width: fit-content;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+.modelButton:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.loginButton {
+    width: fit-content;
+    width: fit-content;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+.loginButton:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+.register {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.registerButton {
+    width: fit-content;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+.registerButton:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
