@@ -89,6 +89,11 @@ export class LoginComponent implements OnInit {
       this.tokenService.setAuthorities(data.authorities[0].authority);
       this.role = data.authorities[0].authority;
       this.tokenService.setLogged(true);
+      if(this.role == 'Admin') {
+        this.tokenService.setAdmin(true);
+      } else {
+        this.tokenService.setAdmin(false);
+      }
     },
     error => {
       this.isLogged = false;
@@ -97,6 +102,7 @@ export class LoginComponent implements OnInit {
       console.log(this.errorMessage);
       alert("Error en los campos.");
       this.tokenService.setLogged(false);
+      this.tokenService.setAdmin(false);
     });
   }
 }

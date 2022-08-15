@@ -19,6 +19,8 @@
   
 .filters { 
     grid-area: filters;
+    margin-left: auto;
+    margin-right: auto;
 }
   
 .models {

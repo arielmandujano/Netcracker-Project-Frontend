@@ -9,15 +9,18 @@
         Models
     </a>
     <a *ngIf="userLogged" routerLink="/new-reservation">
-        Reserve
+        New booking
     </a>
     <a *ngIf="userLogged" routerLink="/login">
-        My Reserves
+        My bookings
     </a>
-    <a routerLink="/login" *ngIf="!userLogged">
+    <a *ngIf="userLogged && isAdmin">
+        Return car
+    </a>
+    <a routerLink="/login" *ngIf="!userLogged" class="login">
         Login
     </a>
-    <a (click)="onLogout()" *ngIf="userLogged" routerLink="/login">
+    <a (click)="onLogout()" *ngIf="userLogged" class="logout">
         Logout
     </a>
 </div>

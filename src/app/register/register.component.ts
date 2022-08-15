@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.createGroup();
   }
 
   createGroup() {
@@ -37,18 +38,22 @@ export class RegisterComponent implements OnInit {
       lastName : new FormControl(this.lastName, Validators.required),
       userName : new FormControl(this.userName, Validators.required),
       address : new FormControl(this.address, Validators.required),
-      email : new FormControl(this.email, Validators.required),
+      email : new FormControl(this.email, [Validators.required, Validators.email]),
       phoneNumber : new FormControl(this.phoneNumber, Validators.required),
       password : new FormControl(this.password, Validators.required),
       picture : new FormControl(this.picture),
       role : new FormControl(this.role)
-    })
+    });
   }
 
   async onCreate(form: NewUser) {
     form.picture = null;
     form.role = "User";
-    this.authService.newUser(form).subscribe()
+    this.authService.newUser(form).subscribe( response => {
+      console.log(response);
+      alert("User created: " + response);
+      window.location.reload();
+    });
   }
 
 }

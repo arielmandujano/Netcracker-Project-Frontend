@@ -22,6 +22,7 @@ import { CarsService } from './services/cars.service';
 import { UsersService } from './services/users.service';
 import { TokenService } from './services/token.service';
 import { ReserveComponent } from './reserve/reserve.component';
+import { SearchReservationComponent } from './search-reservation/search-reservation.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ReserveComponent } from './reserve/reserve.component';
     CreateReserveComponent,
     ContainerComponent,
     CarDetailsComponent,
-    ReserveComponent
+    ReserveComponent,
+    SearchReservationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 const TOKEN_KEY = 'AuthToken'!;
@@ -12,10 +13,14 @@ export class TokenService {
 
   private isLogged: boolean = false;
   private __isLoggedIn = new BehaviorSubject<boolean>(false);
+  private __isAdmin = new BehaviorSubject<boolean>(false);
   
   cast = this.__isLoggedIn.asObservable();
+  casAdmin = this.__isAdmin.asObservable();
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   setToken(token: string) {
     window.sessionStorage.removeItem(TOKEN_KEY);
@@ -52,8 +57,17 @@ export class TokenService {
     this.__isLoggedIn.next(logged);
   }
 
+  getAdmin() {
+    return this.__isAdmin.asObservable();
+  }
+
+  setAdmin(admin: boolean) {
+    this.__isAdmin.next(admin);
+  }
+
   public logout() {
     window.sessionStorage.clear();
+    this.router.navigate(['/home']);
   }
   
 }

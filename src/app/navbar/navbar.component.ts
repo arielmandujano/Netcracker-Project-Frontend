@@ -10,7 +10,7 @@ import { TokenService } from '../services/token.service';
 export class NavbarComponent implements OnInit {
 
   userLogged: boolean = false;
-  logged$!: BehaviorSubject<boolean>;
+  isAdmin: boolean = false;
 
   constructor(
     private tokenService: TokenService
@@ -20,13 +20,15 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.tokenService.cast.subscribe(data => {
       this.userLogged = data as boolean;
-    })
+    });
+    this.tokenService.casAdmin.subscribe( data => {
+      this.isAdmin = data as boolean;
+    });
   }
 
   onLogout(){
-    this.tokenService.logout();
     this.tokenService.setLogged(false);
-    window.location.reload();
+    this.tokenService.logout();
   }
 
 }

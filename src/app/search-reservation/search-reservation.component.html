@@ -1,0 +1,18 @@
+<div class="searchReservation">
+    <h2>Search for a reservation</h2>
+        <div class="field">
+            <form class="searchReserve" [formGroup]="reservationForm" (ngSubmit)="getReservation(reservationForm.value)">
+                <label for="id">Reservation Id:  </label>
+                <input type="number" name="id" placeholder="id" class="idNumber" formControlName="id">
+                <input type="submit" value="SEARCH" class="searchButton">
+            </form>
+        </div>
+        <div class="details" *ngIf="reservation != null">
+            <h3>Reservation code: {{reservation.reservationId}}</h3>
+            <h3>Start date: {{reservation.startDate}}</h3>
+            <h3>End date: {{reservation.endDate}}</h3>
+            <h3>Reservation date: {{reservation.reservationDate}}</h3>
+            <app-car-details [car]="reservation.carId" class="carCard"></app-car-details>
+            <h2>Total amount: ${{reservation.totalAmount}}</h2>
+        </div>
+</div>
